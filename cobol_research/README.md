@@ -11,8 +11,8 @@
 | Question | Answer |
 |---|---|
 | COBOL files originally in `ORG_Frontend` | **0** (it's a TypeScript/React + Vite frontend) |
-| COBOL files cloned into this corpus so far | **1,441 files / ~520,000 lines** (9 repos, ~94 MB) |
-| Expandable (via `clone_corpus.sh`, permissive repos) to | **several thousand** more files |
+| COBOL files cloned into this corpus | **2,307 files / ~941,000 lines** (19 repos, ~197 MB) |
+| ...of which permissively licensed (vendor-safe) | **~2,134 (≈92%)** — MIT / Apache / BSD / CC-BY / Public-Domain |
 | COBOL files in the largest clean downloadable dataset | **X-COBOL v2: 5,195 files** (CC-BY-4.0, Zenodo `14269462`) |
 | COBOL *repositories* on all of GitHub (mined by the X-COBOL study) | **~168–182** genuinely-COBOL repos |
 | COBOL repos by GitHub's looser `language:COBOL` filter | **~9,025** (live GitHub API) |
@@ -31,26 +31,33 @@ The raw third-party source is **not committed** to this frontend repo (see `.git
 licenses and totals tens of MB. Regenerate it any time with [`./clone_corpus.sh`](./clone_corpus.sh),
 which is the authoritative manifest.
 
-Currently cloned (licenses verified from each repo's own LICENSE file):
+Cloned (licenses verified from each repo's own LICENSE file), sorted by COBOL file count:
 
-| Repo | License | Class | Size | COBOL files |
-|---|---|---|--:|--:|
-| [uwol/proleap-cobol-parser](https://github.com/uwol/proleap-cobol-parser) | MIT | permissive | 40 MB | **957** |
-| [meyfa/CobolCraft](https://github.com/meyfa/CobolCraft) | MIT | permissive | 2 MB | 268 |
-| [opensourcecobol/opensource-cobol](https://github.com/opensourcecobol/opensource-cobol) | GPL-2.0 | copyleft | 9.4 MB | 92 |
-| [Martinfx/Cobol](https://github.com/Martinfx/Cobol) | GPL-3.0 | copyleft | 0.6 MB | 49 |
-| [openmainframeproject/cobol-programming-course](https://github.com/openmainframeproject/cobol-programming-course) | CC-BY-4.0 | permissive | 36 MB | 33 |
-| [writ3it/cobol-examples](https://github.com/writ3it/cobol-examples) | none | no-license | 0.5 MB | 32 |
-| [otterkit/otterkit-cobol](https://github.com/otterkit/otterkit-cobol) | Apache-2.0 | permissive | 4.8 MB | 5 |
-| [IBM/cobol-is-fun](https://github.com/IBM/cobol-is-fun) | Apache-2.0 | permissive | 0.4 MB | 3 |
-| [pwittchen/learning-cobol](https://github.com/pwittchen/learning-cobol) | Apache-2.0 | permissive | 0.2 MB | 2 |
-| **Total** | | | **~94 MB** | **1,441** |
+| Repo | License | Class | COBOL files |
+|---|---|---|--:|
+| [uwol/proleap-cobol-parser](https://github.com/uwol/proleap-cobol-parser) | MIT | permissive | **957** |
+| [krisds/koopa](https://github.com/krisds/koopa) | BSD | permissive | 524 |
+| [meyfa/CobolCraft](https://github.com/meyfa/CobolCraft) | MIT | permissive | 268 |
+| [aws-samples/aws-mainframe-modernization-carddemo](https://github.com/aws-samples/aws-mainframe-modernization-carddemo) | Apache-2.0 | permissive | 106 |
+| [exercism/cobol](https://github.com/exercism/cobol) | MIT | permissive | 93 |
+| [opensourcecobol/opensource-cobol](https://github.com/opensourcecobol/opensource-cobol) | GPL-2.0 | copyleft | 92 |
+| [PhaseChangeSoftware/cobol-defects-suite](https://github.com/PhaseChangeSoftware/cobol-defects-suite) | MIT | permissive | 56 |
+| [Martinfx/Cobol](https://github.com/Martinfx/Cobol) | GPL-3.0 | copyleft | 49 |
+| [DillonDepeel/Cobol-Programming-Collection](https://github.com/DillonDepeel/Cobol-Programming-Collection) | MIT | permissive | 38 |
+| [openmainframeproject/cobol-programming-course](https://github.com/openmainframeproject/cobol-programming-course) | CC-BY-4.0 | permissive | 33 |
+| [writ3it/cobol-examples](https://github.com/writ3it/cobol-examples) | none | no-license | 32 |
+| [shamrice/COBOL-Examples](https://github.com/shamrice/COBOL-Examples) | MIT | permissive | 25 |
+| [jmsdnns/webbol](https://github.com/jmsdnns/webbol) | Public-Domain | permissive | 10 |
+| [azac/cobol-on-wheelchair](https://github.com/azac/cobol-on-wheelchair) | MIT | permissive | 7 |
+| [lauryndbrown/Cisp](https://github.com/lauryndbrown/Cisp) | MIT | permissive | 6 |
+| [otterkit/otterkit-cobol](https://github.com/otterkit/otterkit-cobol) | Apache-2.0 | permissive | 5 |
+| [IBM/cobol-is-fun](https://github.com/IBM/cobol-is-fun) | Apache-2.0 | permissive | 3 |
+| [pwittchen/learning-cobol](https://github.com/pwittchen/learning-cobol) | Apache-2.0 | permissive | 2 |
+| [victorqribeiro/perceptronCobol](https://github.com/victorqribeiro/perceptronCobol) | MIT | permissive | 1 |
+| **Total** | | | **2,307** |
 
-`clone_corpus.sh` also pulls a curated **second wave** of permissive repos not yet counted above —
-e.g. `DillonDepeel/Cobol-Programming-Collection` (MIT, ~68 MB games/software archive),
-`aws-samples/aws-mainframe-modernization-carddemo` (Apache-2.0 bank app), `azac/cobol-on-wheelchair`
-(MIT web framework), `lauryndbrown/Cisp` (MIT Lisp-in-COBOL), `exercism/cobol` (MIT katas),
-`krisds/koopa` (BSD) — which take the corpus to several thousand files.
+Non-permissive: only 173 files (opensource-cobol GPL-2.0, Martinfx GPL-3.0, cobol-examples no-license).
+The remaining ~2,134 (≈92%) are permissively licensed and safe to vendor with attribution.
 
 ## Part 2 — How the files were counted
 
@@ -61,9 +68,10 @@ e.g. `DillonDepeel/Cobol-Programming-Collection` (MIT, ~68 MB games/software arc
    `WORKING-STORAGE SECTION`.
 
 This catches COBOL hiding under non-standard extensions (e.g. GnuCOBOL/opensource-cobol autotest
-`.at` files, IBM-i `.CBLLE`). It also produces a handful of **false positives** (~70 of 1,441):
-compiler `.c/.cs/.java/.y/.l` files and proleap `.tree` AST dumps that merely *mention* a division
-keyword. Net genuine COBOL ≈ **1,370**, of which ~1,214 are unambiguous by extension.
+`.at` files, IBM-i `.CBLLE`). It also produces a modest number of **false positives**: compiler
+`.c/.cs/.java/.y/.l` files and parser `.tree` AST dumps that merely *mention* a division keyword.
+Of the **2,307** union files, **2,068** are unambiguous by extension and **2,017** carry a real
+division header; net genuine COBOL is ≈ **2,200**.
 
 ## Part 3 — How much COBOL exists, and how little is public
 
