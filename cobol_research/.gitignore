@@ -1,0 +1,10 @@
+# --- COBOL research corpus: ignore heavy / license-encumbered third-party clones ---
+# The raw cloned repositories under repos/ total ~94 MB and MIX LICENSES:
+#   permissive (Apache-2.0 / MIT / CC-BY-4.0) AND copyleft (GPL-2.0 / GPL-3.0)
+#   AND one repo with NO declared license (writ3it/cobol-examples).
+# They are intentionally NOT vendored into this frontend repo. Regenerate any time with:
+#   ./clone_corpus.sh
+# Only remove these ignore rules if you have made a deliberate decision to vendor that
+# third-party source (and accepted the license obligations) into this repository.
+repos/
+downloads/
